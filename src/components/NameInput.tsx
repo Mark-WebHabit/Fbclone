@@ -1,17 +1,13 @@
 import React from "react";
 
-import ErrorMessageInput from "./ErrorMessageInput";
 import InputField from "./InputField";
 
-type InputNameProp = React.InputHTMLAttributes<HTMLInputElement> & {
-  errorMessage: string;
-};
+type InputNameProp = React.InputHTMLAttributes<HTMLInputElement>;
 
-const NameInput = ({ errorMessage, ...prop }: InputNameProp) => {
+const NameInput = ({ ...prop }: InputNameProp) => {
   return (
-    <div className="flex-1 relative mb-7 ">
+    <div className="flex-1 relative ">
       <InputField {...prop} />
-      <ErrorMessageInput text={errorMessage} />
     </div>
   );
 };

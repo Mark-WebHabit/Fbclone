@@ -20,38 +20,40 @@ function BirthdayInput() {
           the About section of your profile. For more details, please visit our
           Privacy Policy."
       />
-      <div className="bday-div flex items-center gap-4 mt-2 relative mb-7">
-        <select
-          name="month"
-          className="w-full p-3 border-2 rounded-md border-grayWhite bg-pure"
-          onChange={(e) => {
-            const val: number = parseInt(e.target.value);
-            setSelectedMonth(months[val]);
-          }}
-        >
-          {months.map((month, i: number) => {
-            return (
-              <option key={i} value={i}>
-                {month.full}
-              </option>
-            );
-          })}
-        </select>
+      <div className="bday-div  mt-2">
+        <div className="flex items-center gap-4">
+          <select
+            name="month"
+            className="w-full p-3 border-2 rounded-md border-grayWhite bg-pure"
+            onChange={(e) => {
+              const val: number = parseInt(e.target.value);
+              setSelectedMonth(months[val]);
+            }}
+          >
+            {months.map((month, i: number) => {
+              return (
+                <option key={i} value={i}>
+                  {month.full}
+                </option>
+              );
+            })}
+          </select>
 
-        <SelectField
-          name="day"
-          setter={setSelectedDay}
-          arrayLength={selectedMonth.endDate}
-          flag={1}
-        />
+          <SelectField
+            name="day"
+            setter={setSelectedDay}
+            arrayLength={selectedMonth.endDate}
+            flag={1}
+          />
 
-        <SelectField
-          name="year"
-          setter={setSelectedYear}
-          arrayLength={yearSpan + 1}
-          flag={1995}
-        />
-        <ErrorMessageInput text="What's your birth date" />
+          <SelectField
+            name="year"
+            setter={setSelectedYear}
+            arrayLength={yearSpan + 1}
+            flag={1995}
+          />
+        </div>
+        <ErrorMessageInput text="What's your birth date" id="birthday-error" />
       </div>
     </>
   );

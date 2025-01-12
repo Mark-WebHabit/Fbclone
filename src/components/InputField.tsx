@@ -4,7 +4,7 @@ function InputField({ ...prop }: React.InputHTMLAttributes<HTMLInputElement>) {
   return (
     <input
       {...prop}
-      className="w-full p-3 border-2 rounded-md border-grayWhite"
+      className="w-full px-3 py-2 border-2 rounded-md border-grayWhite"
     />
   );
 }

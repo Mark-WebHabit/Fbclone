@@ -5,7 +5,7 @@ import RecentAccount from "../components/RecentAccount";
 
 function Auth() {
   return (
-    <main className="w-screen h-screen flex flex-col md:flex-row bg-white md:px-10 md:pt-0 justify-center items-center">
+    <main className="w-screen min-h-screen  flex flex-col md:flex-row bg-white md:px-10 md:pt-0 justify-center items-center">
       <div className="md:flex-1 flex justify-center items-center flex-col ">
         <div className="flex-1 md:flex-none min-w-0 w-full md:w-auto md:min-w-72  flex justify-end md:justify-center items-center flex-col md:block ">
           <h1 className="text-fbBlue text-40 font-sans font-bold mb-2">

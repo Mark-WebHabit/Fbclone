@@ -1,6 +1,6 @@
 function SignupNameSectionInfo() {
   return (
-    <div className="w-screen phone:w-400 bg-pure py-2 m-0 ">
+    <div className=" bg-pure py-2 m-0 ">
       <h2 className="font-sans font-bold text-center text-3xl text-darkish">
         Create a new account
       </h2>
